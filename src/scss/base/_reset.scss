@@ -1,0 +1,11 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body {
+  background: black;
+  color: red;
+  display: flex;
+  justify-content: center;
+}
