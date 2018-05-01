@@ -1,0 +1,33 @@
+@mixin mq($break) {
+    @if $break == 'se' {
+      @media (min-width: $brkpoint-se){
+        @content;
+      }
+    } @elseif $break == 'mobile' {
+      @media (min-width: $brkpoint-mobile) {
+        @content;
+      }
+    } @else if $break == 'mobilePlus' {
+      @media (min-width: $brkpoint-mobile-plus) {
+        @content;
+      }
+    } @else if $break == 'tabletPortrait' {
+      @media (min-width: $brkpoint-tablet-portrait) {
+        @content;
+      }
+    } @else if $break == 'tabletLandscape' {
+      @media (min-width: $brkpoint-tablet-landscape) {
+        @content;
+      }
+    } @else if $break == 'desktop' {
+      @media (min-width: $brkpoint-desktop) {
+        @content;
+      }
+    } @else if $break == 'desktopHd' {
+        @media (min-width: $brkpoint-desktop-hd) {
+            @content;
+          }
+    } @else {
+      @error 'No value could be retrieved for `#{$break}`. '
+    }
+  }
