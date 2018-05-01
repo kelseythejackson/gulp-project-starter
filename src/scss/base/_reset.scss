@@ -3,9 +3,15 @@
 *::after {
   box-sizing: border-box;
 }
-body {
-  background: black;
-  color: red;
-  display: flex;
-  justify-content: center;
+
+html {
+  // font-size: 5px;
 }
+
+body {
+  font-family: $font-famly;
+  font-weight: $font-weight-regular;
+  margin: 0;
+  padding: 0;
+}
+
