@@ -19,7 +19,10 @@ const gulp = require('gulp'),
 gulp.task('sass', () => {
   const plugins = [
     pxtorem({rootValue: 16, propList: ['*']}),
-    autoprefixer({browsers: ['last 100 versions']})
+    autoprefixer({
+        browsers: ['last 100 versions'],
+        grid: true
+    })
   ];
   return gulp.src('./src/scss/**/*.scss')
   .pipe(maps.init())
